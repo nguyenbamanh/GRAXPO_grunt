@@ -1,0 +1,57 @@
+// COMMON
+// 
+.row {
+	.clearfix;
+}
+
+/* Text align
+--------------------------*/
+.text {
+	&-center{
+		text-align: center;
+	}
+	&-left{
+		text-align: left;
+	}
+	&-right{
+		text-align: right;
+	}
+	&-justif {
+		text-align: justify;
+	}
+	&-nowrap {
+		white-space: nowrap;
+	}
+	&-right-sm {
+		@media @sm {
+			text-align: right;
+		}
+	}
+	&-right-md {
+		@media @md {
+			text-align: right;
+		}
+	}
+}
+
+.pull {
+	&-right-sm {
+		@media @sm {
+			float: right !important;
+		}
+	}
+	
+}
+
+.sr-only {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+select {
+	border-radius : 0 !important;
+	-webkit-border-radius : 0 !important;
+}

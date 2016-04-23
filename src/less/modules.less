@@ -1,0 +1,98 @@
+.sp-button {
+	background: @ht-button-bg;
+	border: none;
+	outline: none;
+	line-height: 34px;
+	padding: 0 20px;
+	.border_radius();
+	.font-size(14);
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	.box-shadow(2px 2px 5px 0 rgba(0,0,0,.3));
+	cursor: pointer;
+	&:active,
+	&:focus {
+		.box-shadow(0px 0px 5px 0 rgba(0,0,0,.3));
+	}
+}
+
+#back-to-top {
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	z-index: 99;
+	bottom: 15px;
+	right: 15px;
+	font-size: 30px;
+	background-color: @ht-primary;
+	color: #fff;
+	cursor: pointer;
+	opacity: 0;
+	display: none;
+	box-shadow: 1px 1px 10px 0px rgba(0,0,0,.15);
+	&:hover {
+		opacity: 1 !important;
+	}
+}
+
+.sp-field-wrapper {
+	position: relative;
+	&.select-wrapper {
+		cursor: pointer;
+		select {
+			padding-right: 20px;
+			margin: 0 !important;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			position: relative;
+			z-index: 2;
+			.border_radius(0);
+		}
+		&:before {
+			.font-awesome("\f107");
+			color: #756e00;
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			margin-top: -10px;
+			z-index: 1;
+		}
+	}
+}
+
+.sp-form {
+	label {
+		.font-size(12);
+		color: @ht-label-color;
+		&.error {
+			margin-top: 5px;
+			color: #ff0000;
+		}
+	}
+	input[type="text"],
+	input[type="password"],
+	select,
+	textarea {
+		.transition;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid @ht-label-color;
+		padding: 0;
+		color: #fff;
+		.font-size(16);
+		position: relative;
+		.box-shadow(0 0 0 0 @ht-secondary);
+		&:focus {
+			.box-shadow(0 1px 0 0 @ht-secondary);
+			border-bottom-color: @ht-secondary;
+		}
+		&.error {
+			.box-shadow-important(0 1px 0 0 #ff0000);
+			border-bottom-color: #ff0000 !important;
+		}
+	}
+}

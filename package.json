@@ -1,0 +1,25 @@
+{
+  "name": "pbl-open-pediatrics",
+  "version": "0.1.0",
+  "authors": [
+    "Thinh Bui <thinhbg@haintheme.com>"
+  ],
+  "description": "pbl-open-pediatrics",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:giathinh910/pbl-open-pediatrics"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-html-build": "^0.3.2",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^1.2.1"
+  }
+}

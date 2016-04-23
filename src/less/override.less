@@ -1,0 +1,94 @@
+// FORM
+// 
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+.form-group {
+	.clearfix;
+	@media @xs-max {
+		margin-bottom: 15px;
+	}
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"],
+	.form-control {
+		border-color: #e5e5e5;
+		&:focus {
+			border-color: @ht-secondary;
+		}
+	}
+	textarea {
+		height: auto;
+	}
+	label {
+		font-weight: 600;
+		&.radio-wrapper {
+			font-weight: 400;
+			display: block;
+			margin-bottom: 5px;
+			.clearfix;
+			cursor: pointer;
+		}
+	}
+	.fake-label {
+		float: left;
+		line-height: 34px;
+		white-space: nowrap;
+		margin-right: 10px;
+	}
+	&.inline {
+		float: left;
+		width: auto;
+		margin-right: 15px;
+	}
+	&.inline-field {
+		select,
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		.form-control {
+			float: left;
+			width: auto;
+		}
+	}
+}

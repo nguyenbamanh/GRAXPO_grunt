@@ -1,0 +1,117 @@
+// HEADER
+// 
+.sp-header {
+	background: @ht-dark;
+	z-index: 6;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	> .container {
+		display: table;
+	}
+	#logo,
+	#sp-main-nav,
+	#sp-header-search-form {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	#logo {
+		a {
+			display: block;
+			padding: 4px 0;
+		}
+		img {
+			vertical-align: middle;
+		}
+	}
+	#sp-main-nav {
+		ul {
+			margin: 0 -24px;
+			li {
+				display: inline-block;
+				padding: 0 24px;
+				a {
+					.font-size(17);
+					display: block;
+					line-height: 66px;
+					color: #fff;
+				}
+			}
+		}
+	}
+	#sp-header-search-form {
+		height: 34px;
+		position: relative;
+		input {
+			padding-left: 45px;
+			border: none;
+			background: #fff;
+			.border_radius();
+		}
+		button {
+			position: absolute;
+			height: 26px;
+			width: 37px;
+			text-align: center;
+			top: 50%;
+			margin-top: -13px;
+			left: 0;
+			background: transparent;
+			border: none;
+			border-right: 1px solid #e5e5e5;
+		}
+	}
+
+	.mobile-control-toggle {
+		float: right;
+		.mobile-nav-toggle {
+			width: 30px;
+			display: block;
+			float: right;
+			z-index: 2;
+			border: none;
+			background-color: transparent !important;
+			background-image: none;
+			cursor: pointer;
+			padding: 0;
+			position: relative;
+			.transition;
+			@media @md {
+				display: none;
+			}
+			&:focus {
+				outline: none;
+			}
+			.screen-reader-text {
+				font-size: 0;
+			}
+			// Bars
+			.icon-bar {
+				.transition;
+				display: block;
+				width: 30px;
+				height: 4px;
+				margin: 5px 0;
+				position: relative;
+				top: 0;
+				background: rgba(255,255,255,.5);
+				.border_radius(4px);
+			}
+			&.is-open {
+				.icon-bar-2 {
+					.opacity(0);
+				}
+				.icon-bar-1 {
+					.transform(rotate(135deg));
+					top: 9px;
+				}
+				.icon-bar-3 {
+					.transform(rotate(-135deg));
+					top: -9px;
+				}
+			}
+		}
+	}
+
+}
